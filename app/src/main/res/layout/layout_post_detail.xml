@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/post_detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/post_detail_author_container"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="horizontal"
+                android:padding="16dp">
+                <ImageView
+                    android:id="@+id/post_detail_author_pic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_action_account_circle"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+                    <TextView
+                        android:id="@+id/post_detail_author_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/placeholder"
+                        android:textSize="14sp"
+                        android:textColor="#dd000000"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:id="@+id/post_detail_author_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/placeholder"
+                        android:textSize="14sp"
+                        android:textColor="#88000000"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1e000000" />
+            <ImageView
+                android:id="@+id/post_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/placeholder"
+                android:textSize="14sp"
+                android:textColor="#dd000000"
+                android:id="@+id/post_detail_body" />
+            <LinearLayout
+                android:id="@+id/poll_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/poll_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Test Poll"
+                    android:textSize="14sp"
+                    android:textColor="#dd000000"
+                    android:fontFamily="sans-serif-medium"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/poll_option_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"
+                        android:theme="@android:style/Theme.Material.Light" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/poll_option_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"
+                        android:theme="@android:style/Theme.Material.Light" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_thumb_up"
+                    android:tint="#737373"
+                    android:id="@+id/post_detail_like_button"
+                    android:visibility="invisible" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_editor_mode_comment"
+                    android:tint="#737373"
+                    android:id="@+id/post_detail_comment_button" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/post_detail_comments_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1e000000" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/post_detail_comments_recycler" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:hint="@string/add_comment"
+                        android:textColorHint="#88000000"
+                        android:textSize="14sp"
+                        android:padding="16dp"
+                        android:id="@+id/post_detail_comments_text"
+                        android:textColor="#dd000000" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/post"
+                        style="@android:style/Widget.Material.Light.Button.Borderless"
+                        android:id="@+id/post_detail_comment_submit"
+                        android:textColor="#dd000000" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
