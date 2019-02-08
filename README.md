@@ -1,5 +1,14 @@
 # StyleShare
+NYS FBLA 2016 Mobile Application Development submission from Williamsville East High School
+Group Members: Evan Ogra, Nikhil Gupta, Aniruddha Nrusimha
 
+Project made in Android Studio 1.5.1
+
+Instructions for testing:
+Install the .apk files on an Android device running 5.0 (API Level 21), an emulator works great.
+Each account with a password of "a".
+
+If there is any issue in getting the app to run, please contact me at eogra99@gmail.com
 
 
 ![gui-screenshots-000](https://user-images.githubusercontent.com/6174415/52458149-a39bde00-2b2b-11e9-87a1-bafcd9829eb5.jpg)
